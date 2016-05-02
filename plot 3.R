@@ -1,0 +1,10 @@
+setwd("C:/Dmytrove/Management/Academic/Coursera/Data Science Specialization (R)/! Data/household_power_consumption")
+titleline <- readLines("household_power_consumption.txt", n=1) 
+print(titleline)
+mycols <- rep(1, NULL); mycols[c(1,1000)] <- NA;
+date <- read.table("household_power_consumption.txt", colClasses=mycols)
+mydata <- read.table("household_power_consumption.txt", nrows = 100)
+par(mfrow = c(2, 1), mar = c(4, 4, 2, 1))
+hist(subset(Energy sub metering, date == "1")$Sub_metering_1, col = "black")
+hist(subset(Energy sub metering, date == "2")$Sub_metering_2, col = "red")
+hist(subset(Energy sub metering, date == "3")$Sub_metering_3, col = "blue")
